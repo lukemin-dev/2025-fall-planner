@@ -1,0 +1,109 @@
+{
+  "semester": "2025 Fall",
+  "timezone": "Asia/Seoul",
+  "defaultEstimateMinutes": 90,
+  "courses": [
+    { "name": "컴퓨터그래픽스", "label": "그래픽스" },
+    { "name": "네트워크소켓", "label": "네트워크소켓" },
+    { "name": "R데이터분석", "label": "R데이터분석" },
+    { "name": "블록체인", "label": "블록체인" },
+    { "name": "기계학습", "label": "기계학습" },
+    { "name": "빅데이터분석", "label": "빅데이터분석" }
+  ],
+  "taskTypes": ["요약1p", "유형문제", "오답정리", "실습/코드", "모의고사"],
+  "weeks": [
+    {
+      "id": "W1",
+      "title": "W1 (Sep29-Oct5)",
+      "startsOn": "2025-09-29",
+      "dueOn": "2025-10-05",
+      "tasks": [
+        {
+          "course": "컴퓨터그래픽스",
+          "type": "요약1p",
+          "title": "렌더링 파이프라인 핵심 정리",
+          "due": "2025-10-02",
+          "goals": ["좌표 변환 흐름 정리", "래스터라이징과 쉐이딩 차이 설명"]
+        },
+        {
+          "course": "네트워크소켓",
+          "type": "실습/코드",
+          "title": "TCP echo 서버와 클라이언트 구현",
+          "due": "2025-10-03",
+          "goals": ["ServerSocket accept 흐름 정리", "클라이언트 종료 예외 처리 확인"]
+        }
+      ]
+    },
+    {
+      "id": "W2",
+      "title": "W2 (Oct6-Oct12)",
+      "startsOn": "2025-10-06",
+      "dueOn": "2025-10-12",
+      "tasks": [
+        {
+          "course": "R데이터분석",
+          "type": "유형문제",
+          "title": "dplyr 전처리 문제 10개",
+          "due": "2025-10-09",
+          "estimateMinutes": 120,
+          "goals": ["filter/select/mutate 복습", "오답 케이스 따로 정리"]
+        },
+        {
+          "course": "블록체인",
+          "type": "요약1p",
+          "title": "블록 구조와 해시 연결 정리",
+          "due": "2025-10-11",
+          "goals": ["블록 헤더 구성요소 정리", "해시 체인 무결성 설명"]
+        }
+      ]
+    },
+    {
+      "id": "W3",
+      "title": "W3 (Oct13-Oct19)",
+      "startsOn": "2025-10-13",
+      "dueOn": "2025-10-19",
+      "tasks": [
+        {
+          "course": "기계학습",
+          "type": "오답정리",
+          "title": "손실함수와 경사하강법 오답 정리",
+          "due": "2025-10-16",
+          "goals": ["MSE와 cross-entropy 비교", "learning rate 문제 패턴 정리"]
+        },
+        {
+          "course": "빅데이터분석",
+          "type": "실습/코드",
+          "title": "Spark DataFrame 기본 연산 복습",
+          "due": "2025-10-18",
+          "estimateMinutes": 120,
+          "goals": ["groupBy/agg 예제 실행", "실행 결과 스크린샷 정리"]
+        }
+      ]
+    },
+    {
+      "id": "Midterms",
+      "title": "Midterms (Oct20-Oct23)",
+      "startsOn": "2025-10-20",
+      "dueOn": "2025-10-23",
+      "tasks": [
+        {
+          "course": "네트워크소켓",
+          "type": "모의고사",
+          "title": "소켓 통신 예상문제 1회",
+          "due": "2025-10-21",
+          "estimateMinutes": 120,
+          "goals": ["TCP/UDP 차이 설명", "멀티스레드 서버 구조 답변 연습"]
+        },
+        {
+          "course": "기계학습",
+          "type": "모의고사",
+          "title": "중간고사 전 범위 모의고사",
+          "due": "2025-10-22",
+          "estimateMinutes": 150,
+          "goals": ["개념형 문제 먼저 풀이", "계산형 문제 시간 제한 연습"]
+        }
+      ]
+    }
+  ]
+}
+

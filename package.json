@@ -1,0 +1,15 @@
+{
+  "name": "2025-fall-planner",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-config.mjs",
+    "labels:preview": "node scripts/sync-labels.mjs",
+    "milestones:preview": "node scripts/sync-milestones.mjs",
+    "issues:preview": "node scripts/create-weekly-issues.mjs",
+    "bootstrap:preview": "bash bootstrap.sh",
+    "bootstrap:apply": "bash bootstrap.sh --apply"
+  }
+}
+

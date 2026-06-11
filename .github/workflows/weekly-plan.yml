@@ -1,0 +1,52 @@
+name: weekly-plan
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Actually create/update labels, milestones, and issues"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      week:
+        description: "Week id to create issues for, or all"
+        required: true
+        default: "W1"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate config
+        run: node scripts/validate-config.mjs
+      - name: Sync labels and milestones
+        run: |
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            bash bootstrap.sh --apply
+          else
+            bash bootstrap.sh
+          fi
+      - name: Create weekly issues
+        run: |
+          APPLY_FLAG=""
+          WEEK_FLAG=""
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            APPLY_FLAG="--apply"
+          fi
+          if [ "${{ inputs.week }}" != "all" ]; then
+            WEEK_FLAG="--week ${{ inputs.week }}"
+          fi
+          node scripts/create-weekly-issues.mjs $WEEK_FLAG $APPLY_FLAG
