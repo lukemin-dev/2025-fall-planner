@@ -57,6 +57,8 @@ scripts/create-weekly-issues.mjs  # 주간 이슈 생성
 .github/workflows/weekly-plan.yml # 수동 실행용 GitHub Actions
 ```
 
+코드와 폴더별 역할을 공부하려면 [`docs/code-walkthrough.md`](./docs/code-walkthrough.md)를 먼저 읽어보세요.
+
 ## 기본 라벨
 - 과목: `그래픽스`, `네트워크소켓`, `R데이터분석`, `블록체인`, `기계학습`, `빅데이터분석`
 - 유형: `요약1p`, `유형문제`, `오답정리`, `실습/코드`, `모의고사`
